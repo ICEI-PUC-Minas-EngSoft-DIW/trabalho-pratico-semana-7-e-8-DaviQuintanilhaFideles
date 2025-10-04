@@ -11,28 +11,27 @@
 <body>
 
     <!-- Cabeçalho -->
-<header class="site-header d-flex flex-wrap align-items-center justify-content-between">
-    <div class="logo">Verde Futuro</div>
+    <header class="site-header d-flex flex-wrap align-items-center justify-content-between">
+        <div class="logo">Verde Futuro</div>
 
-    <nav class="menu-principal">
-        <ul class="d-flex flex-wrap gap-3">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="Serviços.html">Serviços</a></li>
-            <li><a href="Contatos.html">Contatos</a></li>
-            <li><a href="Doações.html">Doações</a></li>
-            <li><a href="Localizações.html">Localizações</a></li>
-        </ul>
-    </nav>
+        <nav class="menu-principal">
+            <ul class="d-flex flex-wrap gap-3">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="Serviços.html">Serviços</a></li>
+                <li><a href="Contatos.html">Contatos</a></li>
+                <li><a href="Doações.html">Doações</a></li>
+                <li><a href="Localizações.html">Localizações</a></li>
+            </ul>
+        </nav>
 
-    <!-- Barra de pesquisa -->
-    <form class="barra-de-pesquisa-header d-flex" action="#" method="GET">
-        <input type="text" placeholder="Buscar..." name="buscar">
-        <button type="submit">🔍</button>
-    </form>
-</header>
+        <!-- Barra de pesquisa -->
+        <form class="barra-de-pesquisa-header d-flex" action="#" method="GET">
+            <input type="text" placeholder="Buscar..." name="buscar">
+            <button type="submit">🔍</button>
+        </form>
+    </header>
 
-    
     <!-- Conteúdo principal -->
     <main class="conteudo-principal container my-4">
         <h1>Verde Futuro</h1>
@@ -49,37 +48,14 @@ Cuidamos do planeta através de projetos de reflorestamento, hortas comunitária
 
 <br>Nosso compromisso é semear esperança, promover o cuidado com a Terra e garantir que ninguém fique sem o básico: comida na mesa e dignidade.</span> <br>
                     <span> Nossa missão é promover ações que preservem o verde e garantam um futuro mais justo. Plantamos árvores, cultivamos hortas comunitárias e transformamos solidariedade em alimento para famílias em situação de vulnerabilidade.</span> <br>
-                    <span></span> <br>
-                    <p class="texto"></p>
                 </h4>
             </article>
         </section>
 
-        <!-- Seção Projetos em destaque -->
-        <section class="projetos-destaque row g-4">
+        <!-- Seção Projetos em destaque (dinâmica) -->
+        <section class="projetos-destaque row g-4" id="lista-projetos">
             <h2>Projetos em Destaque</h2>
-
-            <article class="caixa-post col-md-6">
-                <img src="https://picsum.photos/200/300" alt="imagem de destaque" class="img-fluid rounded">
-                <h3 class="titulo-post">Projetos em Destaque</h3>
-                <h4 class="subtitulo">
-                    <span>26/08/2025</span> <br>
-                    <span>Web Site</span> <br>
-                    <span>vai ficar bom</span> <br>
-                    <p class="texto">SITE AINDA NÃO FINALIZADO.</p>
-                </h4>
-            </article>
-
-            <article class="caixa-post col-md-6">
-                <img src="https://picsum.photos/seed/picsum/200/300" alt="imagem de destaque" class="img-fluid rounded">
-                <h3 class="titulo-post">Nossa equipe</h3>
-                <h4 class="subtitulo">
-                    <span>26/08/2025</span> <br>
-                    <span>Web Site</span> <br>
-                    <span>vai ficar bom</span> <br>
-                    <p class="texto">SITE TOPZEIRA.</p>
-                </h4>
-            </article>
+            <!-- Os cards serão carregados dinamicamente pelo JS -->
         </section>
     </main>
 
@@ -116,6 +92,8 @@ Cuidamos do planeta através de projetos de reflorestamento, hortas comunitária
             </ul>
         </nav>
     </footer>
+
+    <!-- Script para carregar projetos dinamicamente -->
+    <script src="js/app.js"></script>
 </body>
 </html>
-
