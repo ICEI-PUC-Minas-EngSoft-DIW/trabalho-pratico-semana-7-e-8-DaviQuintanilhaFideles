@@ -60,7 +60,7 @@ Cuidamos do planeta através de projetos de reflorestamento, hortas comunitária
     </main>
 
     <!-- Barra lateral -->
-    <aside class="barra-lateral container my-4">
+    <aside class="barra-lateral container my-4" id="detalhes-projeto">
         <!-- Formulário de login -->
         <div class="caixa-de-pesquisa mb-3">
             <form action="#">
@@ -95,5 +95,30 @@ Cuidamos do planeta através de projetos de reflorestamento, hortas comunitária
 
     <!-- Script para carregar projetos dinamicamente -->
     <script src="js/app.js"></script>
+<script>
+  // Pega a div onde vão entrar os projetos
+  const lista = document.getElementById("lista-projetos");
+
+  // Percorre os dados e monta os cards
+  dados.forEach(item => {
+    const card = document.createElement("article");
+    card.classList.add("caixa-post", "col-md-6");
+
+    card.innerHTML = `
+      <img src="${item.imagem}" alt="${item.titulo}" class="img-fluid rounded">
+      <h3 class="titulo-post">
+        <a href="detalhes.html?id=${item.id}">${item.titulo}</a>
+      </h3>
+      <h4 class="subtitulo">
+          <span>${item.data}</span> <br>
+          <span>${item.categoria}</span> <br>
+          <p class="texto">${item.descricao}</p>
+      </h4>
+    `;
+
+    lista.appendChild(card);
+  });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Projeto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Verde Futuro</div>
+    <a href="index.html">⬅ Voltar</a>
+  </header>
+
+  <main class="container my-4" id="detalhes-projeto">
+    <!-- Conteúdo vai ser inserido pelo JS -->
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Verde Futuro</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Pegar o parâmetro id da URL
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+
+    // Procurar o projeto com esse id
+    const projeto = dados.find(item => item.id === id);
+
+    // Onde colocar o conteúdo
+    const container = document.getElementById("detalhes-projeto");
+
+    if (projeto) {
+      container.innerHTML = `
+        <h1>${projeto.titulo}</h1>
+        <img src="${projeto.imagem}" alt="${projeto.titulo}" class="img-fluid rounded">
+        <p><strong>Data:</strong> ${projeto.data}</p>
+        <p><strong>Categoria:</strong> ${projeto.categoria}</p>
+        <p><strong>Autor:</strong> ${projeto.autor}</p>
+        <p>${projeto.conteudo}</p>
+      `;
+    } else {
+      container.innerHTML = `<p>Projeto não encontrado.</p>`;
+    }
+  </script>
+</body>
+</html>
